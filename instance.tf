@@ -5,7 +5,7 @@ resource "aws_instance" "example" {
   # the VPC subnet
   subnet_id = aws_subnet.main-public-2.id
   # the security group
-  vpc_security_group_ids = [aws_security_group.allow-ssh.id]
+  vpc_security_group_ids = [aws_security_group.allow-port.id]
   # the public SSH key
   key_name = aws_key_pair.mykeypair.key_name
 
@@ -27,3 +27,4 @@ resource "aws_volume_attachment" "example-volume-1-attachment" {
   volume_id = aws_ebs_volume.example-volume-1.id
   instance_id = aws_instance.example.id
 }
+
