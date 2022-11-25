@@ -3,7 +3,7 @@ resource "aws_instance" "example" {
   instance_type = var.INSTANCE_TYPE
 
   # the VPC subnet
-  subnet_id = aws_subnet.main-public-1.id
+  subnet_id = aws_subnet.main-public-2.id
   # the security group
   vpc_security_group_ids = [aws_security_group.allow-port.id]
   # the public SSH key

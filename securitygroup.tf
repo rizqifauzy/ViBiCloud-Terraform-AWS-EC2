@@ -1,4 +1,5 @@
 resource "aws_security_group" "allow-port" {
+  vpc_id      = aws_vpc.main.id
   name        = "allow-port"
   description = "Security group for EC2 instance"
   ingress {
