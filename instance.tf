@@ -8,6 +8,8 @@ resource "aws_instance" "example" {
   vpc_security_group_ids = [aws_security_group.allow-port.id]
   # the public SSH key
   key_name = aws_key_pair.mykeypair.key_name
+  #Call User data
+  user_data = data.cloudinit_config.cloudinit-example.rendered
 
   root_block_device {
     volume_size = 10
