@@ -33,3 +33,6 @@ mount /data
 
 # install docker
 curl https://get.docker.com | bash
+
+apt update
+apt install apache

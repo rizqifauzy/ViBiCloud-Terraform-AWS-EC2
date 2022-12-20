@@ -20,7 +20,7 @@ variable "AMIS" {
 }
 
 variable "INSTANCE_TYPE" {
-  default = "t3.medium"
+  default = "t3.large"
 }
 
 variable "INSTANCE_DEVICE_NAME" {
